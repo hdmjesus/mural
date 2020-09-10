@@ -1,0 +1,160 @@
+    /* _____________________________________________________GENERALES__ */
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .contenedor {
+        width: 100%;
+        margin: 50px auto;
+    }
+    
+    body {
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    /* _____________________________________________________GENERALES__ */
+    
+    .mural {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+    
+    .background {
+        padding-bottom: 60%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .item1 .thumb-1 {
+        background-image: url(../img/parque-144330_1280.jpg);
+    }
+    
+    .item2 .thumb-2 {
+        background-image: url(../img/woman-1081873_1280.jpg);
+    }
+    
+    .item3 .thumb-3 {
+        background-image: url(../img/moe-570514_1280.png);
+    }
+    
+    .item4 .thumb-4 {
+        background-image: url(../img/fantasy-4806773_1280.jpg);
+    }
+    
+    .item5 .thumb-5 {
+        background-image: url(../img/cat-4805756_1280.jpg);
+    }
+    
+    .item6 .thumb-6 {
+        background-image: url(../img/books-4812032_1280.jpg);
+    }
+    
+    .item7 .thumb-7 {
+        background-image: url(../img/ballet-545289_1280.jpg);
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        position: relative;
+        top: 0;
+    }
+    
+    .description {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+    
+    .description h1,
+    h2,
+    h3 {
+        font-size: 1em;
+        color: #333;
+    }
+    
+    .description span {
+        font-size: 0.8em;
+        color: #999;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 2em 0 0 0;
+        letter-spacing: .05em;
+    }
+    /*____________________________________________--RESPONSIVE */
+    
+    @media screen and (min-width:400px) {
+        .mural {
+            grid-template-columns: 1fr 1fr;
+        }
+        .item1 {
+            grid-column: 1/-1;
+        }
+        .description h2 {
+            padding-bottom: 70%;
+        }
+    }
+    
+    @media screen and (min-width:680px) {
+        .mural {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .item1 {
+            grid-column: 1/-1;
+        }
+        .description h2 {
+            padding-bottom: 70%;
+        }
+        .description h1,
+        h2,
+        h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+    }
+    
+    @media screen and (min-width:800px) {
+        .mural {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .item1 {
+            grid-column: 1/span 2;
+        }
+        .item4 .description h2 {
+            padding-bottom: 90%;
+        }
+        .item5 .description h2 {
+            padding-bottom: 80%;
+        }
+        .item6 .description h3 {
+            padding-bottom: 80%;
+        }
+        .item7 .description h3 {
+            padding-bottom: 80%;
+        }
+        .description h1,
+        h2,
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+    }
